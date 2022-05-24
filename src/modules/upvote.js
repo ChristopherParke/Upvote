@@ -8,9 +8,6 @@ export default {
     }),
     getters: {},
     mutations: {
-        ADD_GROUP(state, payload) {
-            state.groups.push(payload)
-        },
         ADD_ICON(state, payload) {
             state.groups[payload-1].count++;
         },
@@ -23,10 +20,6 @@ export default {
         }
     },
     actions: {
-        addGroup({ commit }) {
-            let data = {count: 1, status: 0};
-            commit('ADD_GROUP', data)
-        },
         addIcon({commit}, id) {
             commit("ADD_ICON", id)
         },
