@@ -1,6 +1,9 @@
-# Vue 3 + Vite
+# Upvote
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Upvote
+
+This is a Vue.js module created using Vue.js, Vite, and vuex.  The styles were created using Tailwind CSS and vue-fontAwesome.
+ `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
 ## Recommended IDE Setup
 
