@@ -1,13 +1,13 @@
 <template>
     <div >
         <div v-for="group in groups" :key="group" class="flex items-center mb-2">
-            <div v-if="group.status === 1" class="p-1 mr-4 border border-myDarkGrey border-9 rounded inline-block">
-               <button @click="handleToggleStatus(group.id)" class="m-2 bg-myLightBlue p-1 pl-3 pr-3 rounded-lg text-myBlue" v-for="index in group.count" :key="index">
+            <div v-if="group.selected === 1" class="p-1 mr-4 border border-myDarkGrey border-9 rounded inline-block">
+               <button @click="handleToggleSelected(group.id)" class="m-2 bg-myLightBlue p-1 pl-3 pr-3 rounded-lg text-myBlue" v-for="index in group.count" :key="index">
                     <font-awesome-icon :icon="['fa', 'arrow-up']" />
                 </button>
             </div>
             <div v-else class="p-1 mr-4 border border-myDarkGrey border-9 rounded inline-block">
-               <button @click="handleToggleStatus(group.id)" class="m-2 bg-myGrey p-1 pl-3 pr-3 rounded-lg text-myBlack" v-for="index in group.count" :key="index">
+               <button @click="handleToggleSelected(group.id)" class="m-2 bg-myGrey p-1 pl-3 pr-3 rounded-lg text-myBlack" v-for="index in group.count" :key="index">
                     <font-awesome-icon :icon="['fa', 'arrow-up']" />
                 </button>
             </div>       
@@ -28,8 +28,8 @@
         return store.state.upvote.groups
     })
 
-    const handleToggleStatus = (id) => {
-        store.dispatch('toggleStatus', id)
+    const handleToggleSelected = (id) => {
+        store.dispatch('toggleSelected', id)
     }
 
     const handleAddIcon = (id) => {
